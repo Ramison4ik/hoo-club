@@ -1,0 +1,25 @@
+.ConfirmationWindowModal {
+  &__access-button {
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    max-height: 48px;
+    border: none;
+    margin-bottom: 32px;
+    background: linear-gradient(90.23deg, #D231C1 3.15%, #5E1ED2 99.8%);
+    border-radius: 8px;
+  }
+  &__title-text{
+    max-width: 394px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 24px;
+  }
+  &__access-text {
+    max-width: 394px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 24px;
+  }
+}

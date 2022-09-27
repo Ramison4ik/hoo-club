@@ -1,0 +1,91 @@
+@import "src/styles/constants.module";
+
+.HooContent {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  &__wrapper {
+    position: static;
+    padding-bottom: 370px;
+  }
+
+  &__left-smoke {
+    left: 0;
+    top: 18px;
+    position: absolute;
+  }
+
+  &__title {
+    padding-bottom: 32px;
+  }
+  &__button-calculator-link {
+    text-decoration: none;
+  }
+  &__text:first-child {
+    padding-bottom: 24px;
+  }
+
+  &__title-wrapper {
+    padding: 240px 0 0 16px;
+    max-width: 680px;
+  }
+
+  &__right-image {
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__text-wrapper {
+    padding-bottom: 48px;
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+  }
+
+  &__button-order-wrapper {
+    padding-right: 46px;
+  }
+
+  &__right-content-wrapper {
+    position: relative;
+  }
+
+  &__right-smoke {
+    position: absolute;
+    top: -84px;
+    right: -90px;
+  }
+
+  &__right-smoke-bottom {
+    position: absolute;
+    bottom: -123px;
+    left: -123px;
+  }
+
+  &__button-order {
+    padding: 12px 90px;
+    border-radius: 8px;
+    border: none;
+    max-height: 48px;
+    cursor: pointer;
+    background: linear-gradient(90.23deg, #D231C1 3.15%, #5E1ED2 99.8%);
+  }
+
+  &__button-calculator {
+    padding-right: 12px;
+  }
+
+  &__button-check-price {
+    padding: 12px 0;
+    border-radius: 8px;
+    max-height: 48px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: $Black;
+  }
+}

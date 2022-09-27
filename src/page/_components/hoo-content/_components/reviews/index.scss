@@ -1,0 +1,118 @@
+@import "src/styles/constants.module";
+
+.Reviews {
+  &__wrapper {
+    padding-bottom: 244px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    max-width: 1234px;
+    margin: 0 auto;
+  }
+
+  &__main-text {
+    padding-bottom: 32px;
+  }
+
+  &__text-wrapper {
+    max-width: 946px;
+  }
+
+  &__slider-wrapper {
+    position: relative;
+  }
+
+  &__mix-image {
+    position: absolute;
+    top: -85px;
+    left: -277px;
+  }
+
+  &__carousel-item {
+    border: none;
+    background: #282A32;
+    border-radius: 12px;
+    box-sizing: border-box;
+    height: 252px;
+    overflow: hidden;
+    padding: 32px;
+    outline: none;
+    &-img {
+      border-radius: 20px;
+    }
+  }
+  &__carousel-img-wrapper {
+    display: flex;
+    margin-bottom: 24px;
+  }
+  &__carousel-img {
+    padding-right: 32px;
+  }
+  &__carousel-comment {
+    max-width: 420px;
+  }
+  &__carousel-star {
+    padding-top: 12px;
+  }
+}
+
+// :global is used because react-slick can not use css modules
+.Reviews__carousel .slick-list .slick-track {
+  // чтобы не центрировалось по центру когда 1 слайд
+  margin: 0;
+  display: flex;
+}
+
+.Reviews__carousel .slick-slide {
+  min-width: 450px;
+  margin-right: 30px;
+}
+
+.slick-list {
+  overflow: hidden;
+  max-width: 1286px;
+}
+.Reviews__carousel  .slick-track {
+  justify-content: space-around;
+  width: 3840px !important;
+  display: flex;
+}
+// кружок для стрелки
+.Reviews__carousel .slick-prev,
+.Reviews__carousel .slick-next {
+  align-items: center;
+  background: $Black;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  top: -66px;
+  transition: visibility .3s linear, opacity .3s linear;
+  width: 24px;
+  z-index: 1;
+}
+
+// тень для стрелки
+.Reviews__carousel .slick-next {
+  margin-right: 24px;
+  right: 0;
+  transform-style: preserve-3d;
+}
+
+// тень для стрелки
+.Reviews__carousel .slick-prev {
+  display: none !important;
+}
+
+// спрятать стрелку либы
+.Reviews__carousel .slick-prev::before,
+.Reviews__carousel .slick-next::before {
+  display: none;
+}

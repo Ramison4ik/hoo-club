@@ -1,0 +1,169 @@
+.HookaOrder {
+  &__wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 64px;
+  }
+
+  &__tabs {
+    display: flex;
+    padding: 0;
+  }
+
+  &__tab-underline {
+    background: linear-gradient(90.23deg, #D231C1 3.15%, #5E1ED2 99.8%);
+    border-radius: 40px;
+    height: 8px;
+    position: absolute;
+    width: 100%;
+    bottom: -25px;
+  }
+
+  &__combination-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__first-tab {
+    margin-right: 48px;
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+  }
+
+  &__second-tab {
+    position: relative;
+  }
+
+  &__tab-content {
+    display: flex;
+    padding-bottom: 90px;
+  }
+
+  &__combination-wrapper {
+    display: flex;
+  }
+
+  &__combination {
+    padding-right: 30px;
+  }
+
+  &__combination-list-item {
+    list-style: none;
+    white-space: nowrap;
+    padding-bottom: 24px;
+    min-width: 200px;
+    &::before {
+      content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: #fff; /* Change the color */
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 1em; /* Also needed for space (tweak if needed) */
+      margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
+    &--present {
+      list-style: none;
+      &::before {
+        content: ""
+      }
+    }
+  }
+
+  &__list-item-present-wrapper {
+    position: relative;
+  }
+
+  &__list-item-present-image {
+    position: absolute;
+    left: -24px;
+  }
+
+  &__second-tab {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  &__combination-hooka {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #2E313A 0%, rgba(46, 49, 58, 0) 100%);
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.1));
+    border-radius: 12px;
+    margin-right: 40px;
+    padding: 24px 24px 24px 40px;
+  }
+
+  &__combination-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__combination-button {
+    cursor: pointer;
+    background: linear-gradient(90.23deg, #D231C1 3.15%, #5E1ED2 99.8%);
+    border-radius: 100px;
+    padding: 8px 32px;
+  }
+
+  &__delivery-wrapper {
+    padding-bottom: 240px;
+  }
+
+  &__delivery-top {
+    padding-bottom: 24px;
+  }
+
+  &__delivery-terms-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__delivery-terms-image {
+    display: flex;
+  }
+
+  &__terms-image {
+    padding-right: 20px;
+  }
+
+  &__tabs-line {
+    border: 1px solid #6720D1;
+    border-radius: 40px;
+    height: 8px;
+  }
+
+  &__delivery-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__delivery-block-first {
+    background: #282A32;
+    padding: 8px 16px;
+    text-align: center;
+    min-width: 30%;
+    border-radius: 40px 0 0 40px;
+  }
+
+  &__delivery-block-second {
+    background: #282A32;
+    padding: 8px 16px;
+    text-align: center;
+    min-width: 30%;
+  }
+
+  &__delivery-block-third {
+    background: #282A32;
+    padding: 8px 16px;
+    text-align: center;
+    min-width: 30%;
+    border-radius: 0 40px 40px 0;
+  }
+}

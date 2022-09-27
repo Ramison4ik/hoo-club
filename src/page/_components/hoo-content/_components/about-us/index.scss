@@ -1,0 +1,42 @@
+.AboutUs {
+  &__wrapper {
+    padding-bottom: 174px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  &__main-image {
+    border-radius: 14px;
+    overflow: hidden;
+    max-width: 546px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__image {
+    padding-right: 40px;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  &__text-wrapper {
+    max-width: 692px;
+  }
+
+  &__main-text {
+    padding-bottom: 32px;
+  }
+
+  &__title {
+    padding-bottom: 24px;
+  }
+
+  &__about-us-smoke {
+    position: absolute;
+    left: -290px;
+    bottom: 50px;
+  }
+}

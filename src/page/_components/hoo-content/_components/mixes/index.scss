@@ -1,0 +1,102 @@
+@import "src/styles/constants.module";
+
+.Mixes {
+  &__wrapper {
+    padding-bottom: 244px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
+    max-width: 1234px;
+    margin: 0 auto;
+  }
+
+  &__main-text {
+    padding-bottom: 32px;
+  }
+
+  &__text-wrapper {
+    max-width: 946px;
+  }
+
+  &__slider-wrapper {
+    position: relative;
+  }
+
+  &__mix-image {
+    position: absolute;
+    right: -277px;
+    top: -201px;
+  }
+
+  &__secondary-text {
+    padding-bottom: 36px;
+  }
+
+  &__carousel-item {
+    border: none;
+    box-sizing: border-box;
+    max-width: 400px;
+    min-width: 200px;
+    height: 158px;
+    overflow: hidden;
+    outline: none;
+    padding-right: 38px;
+    &-img {
+      border-radius: 20px;
+    }
+  }
+}
+
+// :global is used because react-slick can not use css modules
+.Mixes__carousel .slick-list .slick-track {
+  // чтобы не центрировалось по центру когда 1 слайд
+  margin: 0;
+  display: flex;
+}
+.slick-list {
+  overflow: hidden;
+  max-width: 1286px;
+}
+.slick-track {
+  display: flex;
+}
+// кружок для стрелки
+.Mixes__carousel .slick-prev,
+.Mixes__carousel .slick-next {
+  align-items: center;
+  background: $Black;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  top: -66px;
+  transition: visibility .3s linear, opacity .3s linear;
+  width: 24px;
+  z-index: 1;
+}
+
+// тень для стрелки
+.Mixes__carousel .slick-next {
+  margin-right: 24px;
+  right: 0;
+  transform-style: preserve-3d;
+
+}
+
+// тень для стрелки
+.Mixes__carousel .slick-prev {
+  display: none !important;
+}
+
+// спрятать стрелку либы
+.Mixes__carousel .slick-prev::before,
+.Mixes__carousel .slick-next::before {
+  display: none;
+}

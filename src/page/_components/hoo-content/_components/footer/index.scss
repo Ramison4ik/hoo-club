@@ -1,0 +1,27 @@
+@import "src/styles/constants.module";
+
+.Footer {
+  padding: 60px 0 38px 0;
+  display: flex;
+  position: relative;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+
+  &__logo {
+    max-width: 186px;
+    max-height: 118px;
+    padding-right: 48px;
+  }
+
+  &__vk-logo {
+    padding-right: 28px;
+  }
+
+  &__vk-logo,
+  &__insta-logo {
+    max-width: 26px;
+    max-height: 22px;
+    cursor: pointer;
+  }
+}

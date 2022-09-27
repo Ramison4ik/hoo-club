@@ -1,0 +1,115 @@
+.Modal {
+  align-items: stretch;
+  background-color: #282A32;
+  border-radius: 6px;
+  box-shadow: 0 0 26px rgba(0, 0, 0, .19);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-height: 80vh;
+  padding: 48px 32px 48px 32px;
+  position: relative;
+
+  &--xs {
+    max-width: 100%;
+    min-width: 360px;
+  }
+
+  &--s {
+    width: 496px;
+  }
+
+  &--m {
+    width: 496px;
+  }
+
+  &--l {
+    width: 696px;
+  }
+  &__left {
+    height: 100%;
+    max-height: unset;
+  }
+  &__xl {
+    width: 60%;
+    border-radius: 0;
+  }
+
+  &--full {
+    max-height: none;
+    width: 95%;
+  }
+
+  &--no-padding {
+    padding: 0;
+    width: auto;
+  }
+
+  &--with-out-overlay {
+    bottom: 24px;
+    left: 50%;
+    padding: 24px;
+    position: fixed;
+    transform: translateX(-50%);
+
+    &.Modal--s {
+      max-width: 400px;
+      min-width: 240px;
+      width: auto;
+    }
+  }
+
+  &__title {
+    display: block;
+    padding-bottom: 48px;
+    white-space: normal;
+  }
+
+  &__close-button {
+    position: absolute;
+    cursor: pointer;
+    right: 24px;
+    top: 16px;
+  }
+
+  &__content {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0;
+
+    &--no-padding {
+      margin: 0;
+      padding: 0;
+    }
+
+    &--with-out-overlay {
+      margin: 0 -24px 0 -24px;
+      padding: 0 24px;
+    }
+  }
+
+  &__action-buttons {
+    display: flex;
+    margin-top: 24px;
+
+    &--with-out-overlay {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    vertical-align: middle;
+
+    &--last {
+      padding-left: 24px;
+    }
+
+    &--single {
+      padding-left: 0;
+    }
+  }
+}
+

@@ -1,0 +1,120 @@
+@import "src/styles/constants.module";
+
+// families
+
+$LatoFont: "lato",arial,sans-serif;
+$GagalinFont: "gagalin",arial,sans-serif;
+$LatoFontBold: "latobold",arial,sans-serif;
+
+// sizes
+
+@mixin h0 {
+  font-family: $GagalinFont;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+@mixin h1-gagalin {
+  font-family: $GagalinFont;
+  font-size: 36px;
+  line-height: 32px;
+}
+
+@mixin h1 {
+  font-family: $LatoFontBold;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+@mixin h2-gagalin {
+  font-family: $GagalinFont;
+  font-size: 24px;
+  line-height: 56px;
+}
+
+@mixin h1-mobile {
+  font-family: $LatoFontBold !important;
+  font-size: 24px !important;
+  line-height: 28px !important;
+}
+
+@mixin h2 {
+  font-family: $LatoFont;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+@mixin h2-bold {
+  font-family: $LatoFontBold;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+@mixin h2-mobile {
+  font-family: $LatoFont !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+}
+
+
+@mixin h3 {
+  font-family: $LatoFont;
+  font-size: 17px;
+  line-height: 28px;
+}
+
+@mixin h3-mobile {
+  font-family: $LatoFont !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+}
+
+
+@mixin h4 {
+  font-family: $LatoFont;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin h4-mobile {
+  font-family: $LatoFont !important;
+  font-size: 13px !important;
+  line-height: 16px !important;
+}
+
+
+@mixin h5 {
+  font-family: $LatoFont;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+@mixin h5-mobile {
+  font-family: $LatoFont !important;
+  font-size: 12px !important;
+  line-height: 12px !important;
+}
+
+@mixin h6 {
+  font-family: $LatoFontBold;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+// color presets
+
+@mixin Black {
+  color: $Black;
+}
+
+@mixin BlackHeader {
+  color: $BlackHeader;
+}
+
+@mixin White {
+  color: $White;
+}
+
+@mixin Yellow {
+  color: $Yellow;
+}

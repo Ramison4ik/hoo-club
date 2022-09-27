@@ -1,0 +1,47 @@
+.Overlay {
+  align-items: center;
+  background-color: rgba(255, 255, 255, var(--overlay-opacity));
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  transition: background-color var(--overlay-animation-duration);
+
+  &__absolute {
+    position: absolute;
+  }
+  &__background {
+    background: none;
+  }
+  &__position_left {
+    justify-content: unset;
+    height: 100%;
+  }
+  &__whiteBackground {
+    background-color: rgba(255, 255, 255, var(--overlay-opacity));
+  }
+
+  &__transparent {
+    background-color: transparent;
+  }
+
+  &__inherit {
+    background-color: inherit;
+  }
+
+  &__enter {
+    animation: fadeInOverlay var(--overlay-animation-duration) forwards;
+  }
+
+  &__exit {
+    animation: fadeOutOverlay var(--overlay-animation-duration) forwards;
+  }
+
+  &__curved {
+    border-radius: 4px;
+  }
+}

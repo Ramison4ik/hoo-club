@@ -1,0 +1,95 @@
+@import "src/styles/constants.module";
+
+.Contacts {
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  &__wrapper {
+    background: #282A32;
+  }
+
+  &__text-wrapper {
+    padding: 80px 0 40px 0;
+  }
+
+  &__fields_name {
+    padding-bottom: 38px;
+    position: relative;
+  }
+
+  &__fields_phone {
+    padding-bottom: 54px;
+    position: relative;
+  }
+
+  &__form {
+    max-width: 375px;
+    padding-right: 148px;
+  }
+
+  &__field_name,
+  &__field_phone {
+    border: 1px solid #4e4e4f;
+    background: #282A32;
+    border-radius: 4px;
+    padding: 11px 16px;
+    width: 340px;
+    color: #fff;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__content-order-form {
+    display: flex;
+  }
+
+  &__callback-img {
+    border-radius: 12px;
+  }
+
+  &__fields_label {
+    position: absolute;
+    top: -11px;
+    left: 12px;
+    &::after {
+      content: '*';
+      position: absolute;
+      color: #fff;
+    }
+  }
+
+  &__callback_button {
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    max-width: 370px;
+    max-height: 48px;
+    border: none;
+    margin-bottom: 32px;
+    background: linear-gradient(90.23deg, #D231C1 3.15%, #5E1ED2 99.8%);
+    border-radius: 8px;
+  }
+
+
+  &__content-information {
+    display: flex;
+    padding-bottom: 86px;
+  }
+
+  &__information {
+    display: flex;
+    padding-right: 42px;
+    align-items: center;
+  }
+
+  &__information-img {
+    padding-right: 16px;
+  }
+}
