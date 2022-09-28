@@ -21,7 +21,7 @@ export const ModalOrder = memo(({onCloseModal, isModalOpened, title}:PropsType) 
     };
     await axios
       .post(
-        'https://vintnew.ru/sendMail', bodyParams
+        'https://hoo-club.ru/sendMail', bodyParams
       )
       .then(response => {
         setIsLoading(false);

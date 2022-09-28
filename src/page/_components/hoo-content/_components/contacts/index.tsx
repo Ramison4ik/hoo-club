@@ -20,7 +20,7 @@ export const Contacts = memo(() => {
     };
     await axios
       .post(
-        'https://vintnew.ru/sendMail', bodyParams
+        'https://hoo-club.ru/sendMail', bodyParams
       )
       .then(response => {
         setIsSendSuccess(true);
