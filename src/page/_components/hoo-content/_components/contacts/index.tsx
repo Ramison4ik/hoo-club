@@ -75,6 +75,8 @@ export const Contacts = memo(() => {
               onSubmit={onSubmit}
               render={({ handleSubmit }) => (
                   <form className="Contacts__form" onSubmit={handleSubmit}>
+                    {!isSendSuccess&&(
+                      <>
                     <div className="Contacts__fields_wrapper">
                       <div className="Contacts__fields_name">
                         <label className="Contacts__fields_label" htmlFor="name"><Text size='h4-mobile' color='White' text='Имя'/></label>
@@ -112,6 +114,17 @@ export const Contacts = memo(() => {
                     <div className="Contacts__agreement">
                       <Text size='h4-mobile' color='White' text='Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с политикой конфиденциальности'/>
                     </div>
+                      </>
+                  )}
+                  {isSendSuccess && (
+                    <div className="ModalOrder__callback_success">
+                      <div className="ModalOrder__success_block">
+                        <div className="ModalOrder__success_title">
+                          <Text size='h2' color='White' text='Заявка успешно отправлена'/>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                   </form>
               )}
             />

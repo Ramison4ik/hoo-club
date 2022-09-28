@@ -2,6 +2,7 @@ import React, {memo, useState} from "react";
 import {Modal} from "src/_components/modal";
 import {Field, Form} from "react-final-form";
 import {Text} from "src/_components/text";
+import {CloseIcon} from "src/_components/close-icon";
 import './index.scss'
 import axios from "axios";
 
@@ -13,6 +14,7 @@ type PropsType = {
 
 export const ModalOrder = memo(({onCloseModal, isModalOpened, title}:PropsType) => {
   const [isLoading, setIsLoading] = useState(false);
+  const [isSendSuccess, setIsSendSuccess] = useState(false);
 
   const onSubmit = async (values) => {
     setIsLoading(true);
@@ -25,14 +27,23 @@ export const ModalOrder = memo(({onCloseModal, isModalOpened, title}:PropsType) 
       )
       .then(response => {
         setIsLoading(false);
+        setIsSendSuccess(true);
       })
       .catch(() => {
         setIsLoading(false);
       });
   };
+
+  const handleCloseCallbackModal = () => {
+    setIsSendSuccess(false);
+  };
+
+  const modalTitle = !isSendSuccess ? title : '';
+
   return (
-    <Modal title={title} position="left" withoutOverlay isShowCloseIcon size="xl" isOpened={isModalOpened} onClose={onCloseModal}>
+    <Modal title={modalTitle} position="left" withoutOverlay isShowCloseIcon size="xl" isOpened={isModalOpened} onClose={onCloseModal}>
       <div className="ModalOrder__content-order-form">
+        {!isSendSuccess&&(
         <Form
           onSubmit={onSubmit}
           render={({ handleSubmit }) => (
@@ -77,6 +88,16 @@ export const ModalOrder = memo(({onCloseModal, isModalOpened, title}:PropsType) 
             </form>
           )}
         />
+        )}
+        {isSendSuccess && (
+          <div className="ModalOrder__callback_success">
+            <div className="ModalOrder__success_block">
+              <div className="ModalOrder__success_title">
+                <Text size='h2' color='White' text='Заявка успешно отправлена'/>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </Modal>
   )
