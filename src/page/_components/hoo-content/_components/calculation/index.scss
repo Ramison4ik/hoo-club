@@ -24,6 +24,11 @@
     display: flex;
     align-items: center;
   }
+  &__message-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
   &__tabs-wrapper {
     width: 100%;
     max-width: 1280px;

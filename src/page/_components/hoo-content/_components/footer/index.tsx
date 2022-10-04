@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import logo from "src/page/_components/hoo-content/_assets/footer-logo.svg";
 import vk from "src/page/_components/hoo-content/_assets/vk.svg";
 import insta from "src/page/_components/hoo-content/_assets/insta.svg";
+import telegram from "src/page/_components/hoo-content/_assets/Telegram.svg";
 import './index.scss'
 
 export const Footer = memo(() => {
@@ -38,6 +39,17 @@ export const Footer = memo(() => {
             // @ts-ignore
             loading="lazy"
             src={insta}
+          />
+        </a>
+        <a href="https://t.me/HooClubb" target="_blank" >
+          <img
+              alt='HooClub'
+              className='Footer__telegram-logo'
+            // https://caniuse.com/?search=lazy%20loading%20attribute
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+              loading="lazy"
+              src={telegram}
           />
         </a>
       </div>

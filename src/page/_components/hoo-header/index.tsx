@@ -5,6 +5,7 @@ import {Instagram} from "src/page/_components/hoo-header/_components/instagram";
 import {MENU_ITEMS} from "src/page/_components/hoo-header/_constants";
 import {Vk} from "src/page/_components/hoo-header/_components/vk";
 import {pageNavigate} from "src/page/_components/hoo-header/_utils/handleNavigate";
+import {Telegram} from "src/page/_components/hoo-header/_components/telegram";
 import {ModalOrder} from "src/page/_components/hoo-content/_components/modal-order";
 import './index.scss'
 
@@ -57,6 +58,9 @@ export const HooHeader = memo(({onClick}:PropsType) => {
         </a>
         <a href="https://vk.com/id751246017" target="_blank" className="HooHeader__vk">
           <Vk/>
+        </a>
+        <a href="https://t.me/HooClubb" target="_blank" className="HooHeader__vk">
+          <Telegram/>
         </a>
       </div>
       {isModalOpened&&(

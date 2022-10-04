@@ -7,7 +7,7 @@ import './index.scss'
 
 export const Calculation = memo(() => {
   const [activeTabIndex, setActiveTab] = useState('2');
-  const [activeHour, setActiveHour] = useState(3);
+  const [activeHour, setActiveHour] = useState(2);
   const [isModalOpened, setIsModalOpened] = useState(false);
 
   const isFirstTab = useMemo(() => activeTabIndex === '2', [activeTabIndex]);
@@ -17,7 +17,7 @@ export const Calculation = memo(() => {
   const isFifthTab = useMemo(() => activeTabIndex === '9', [activeTabIndex]);
   const isSixthTab = useMemo(() => activeTabIndex === '15', [activeTabIndex]);
 
-  const isFirstHour = useMemo(() => activeHour === 3, [activeHour]);
+  const isFirstHour = useMemo(() => activeHour === 2, [activeHour]);
   const isSecondHour = useMemo(() => activeHour === 4, [activeHour]);
   const isThirdHour = useMemo(() => activeHour === 5, [activeHour]);
   const isFourthHour = useMemo(() => activeHour === 6, [activeHour]);
@@ -83,7 +83,7 @@ export const Calculation = memo(() => {
         </div>
         <div className="Calculation__hours-wrapper">
           <ul className="Calculation__hours">
-            <li role='button' tabIndex={1} onClick={handleChangeHours(3)} className="Calculation__hour">
+            <li role='button' tabIndex={1} onClick={handleChangeHours(2)} className="Calculation__hour">
               <div className={'Calculation__3hour-round' + (isFirstHour ? ' Calculation__3hour-round--active' : '')}/>
               <Text size='h2' color='White' text='2 часа'/>
             </li>
@@ -139,18 +139,20 @@ export const Calculation = memo(() => {
               </div>
             </div>
             <div className="Calculation__message">
-              <div className="Calculation__message-image-wrapper">
-                <img
-                  alt='HooClub'
-                  className='Calculation__message-image'
-                  // https://caniuse.com/?search=lazy%20loading%20attribute
-                  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                  // @ts-ignore
-                  loading="lazy"
-                  src={message}
-                />
-              </div>
-              <Text size='h2' color='White' text='Написать'/>
+              <a className="Calculation__message-link" href='https://t.me/HooClubb' target='_blank'>
+                <div className="Calculation__message-image-wrapper">
+                  <img
+                    alt='HooClub'
+                    className='Calculation__message-image'
+                    // https://caniuse.com/?search=lazy%20loading%20attribute
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore
+                    loading="lazy"
+                    src={message}
+                  />
+                </div>
+                <Text size='h2' color='White' text='Написать'/>
+              </a>
             </div>
           </div>
         </div>
