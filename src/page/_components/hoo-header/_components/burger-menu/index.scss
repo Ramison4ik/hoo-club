@@ -1,0 +1,53 @@
+.BurgerMenu {
+  &__burger-menu {
+    background: #282A32;
+  }
+
+  &__header {
+    display: flex;
+    padding-top: 50px;
+    align-items: center;
+  }
+
+  &__logo,
+  &__vk-logo,
+  &__insta-logo {
+    padding-right: 26px;
+  }
+
+  &__burger-menu-list-link {
+    text-decoration: none;
+  }
+
+  &__burger-menu-list:not(:last-child) {
+    padding-bottom: 32px;
+    &::marker {
+      color: #D231C1;
+    }
+  }
+  &__burger-menu-list{
+    &::marker {
+      color: #D231C1;
+    }
+    &:last-child {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__line {
+    text-align: center;
+    border-top: 1px dashed #D231C1;
+    height: 18px;
+    padding-bottom: 25px;
+  }
+
+  &__information {
+    display: flex;
+    align-items: center;
+    padding-bottom: 25px;
+  }
+
+  &__information-img {
+    padding-right: 12px;
+  }
+}

@@ -24,9 +24,12 @@
     width: 496px;
   }
 
-  &--l {
-    width: 696px;
+  &--full {
+    width: 100%;
+    min-height: 100%;
+    padding: 0 18px 48px 18px;
   }
+
   &__left {
     height: 100%;
     max-height: unset;
@@ -34,11 +37,6 @@
   &__xl {
     width: 60%;
     border-radius: 0;
-  }
-
-  &--full {
-    max-height: none;
-    width: 95%;
   }
 
   &--no-padding {
@@ -113,3 +111,10 @@
   }
 }
 
+@media (max-width: 720px) {
+  .Modal {
+    &--m {
+      width: 100%;
+    }
+  }
+}

@@ -29,7 +29,7 @@
 
   &__form {
     max-width: 375px;
-    padding-right: 148px;
+    padding-right: 130px;
   }
 
   &__field_name,
@@ -124,5 +124,42 @@
 
   &__information-img {
     padding-right: 16px;
+  }
+}
+@media (max-width: 1325px) {
+  .Contacts {
+    &__wrapper {
+      padding: 12px 12px 150px 12px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .Contacts {
+    &__callback-img {
+      display: none;
+    }
+    &__content-order-form {
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .Contacts {
+    &__form {
+      padding-right: unset;
+      max-width: unset;
+    }
+    &__field_phone,
+    &__field_name {
+      width: 90%;
+    }
+    &__callback_button {
+      max-width: unset;
+      width: 100%;
+    }
+    &__content-information {
+      flex-direction: column;
+    }
   }
 }

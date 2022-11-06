@@ -15,6 +15,9 @@
     top: 0;
     right: 0;
   }
+  &__hoo-classification-wrapper-mobile {
+    display: none;
+  }
   &__content {
     max-width: 1280px;
     padding-top: 240px;
@@ -81,5 +84,70 @@
 
   &__hoo-text-down {
     text-align: center;
+  }
+}
+
+@media (max-width: 1352px) {
+  .BestHoo {
+    &__hoo-classification-wrapper {
+      display: none;
+    }
+    &__hoo-classification-wrapper-mobile {
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 24px;
+    }
+    &__hoo-classic-first,
+    &__hoo-classic-second {
+
+    }
+    &__content-text-wrapper {
+      max-width: unset;
+      padding-right: 0;
+    }
+    &__content-text {
+      padding-bottom: 24px;
+    }
+  }
+}
+
+@media (max-width: 1068px) {
+  .BestHoo {
+    &__wrapper {
+      padding: 12px 12px 200px 12px;
+    }
+    &__pineapple,
+    &__garnet,
+    &__classic {
+      height: 120px;
+    }
+    &__grapefruit {
+      height: 80px;
+    }
+    &__hoo-grapefruit,
+    &__hoo-classic,
+    &__hoo-garnet {
+      padding-right: 0;
+    }
+    &__right-smoke,
+    &__left-smoke {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .BestHoo {
+    &__pineapple,
+    &__garnet,
+    &__classic {
+      height: 80px;
+    }
+    &__content {
+      padding-top: 24px;
+    }
+    &__grapefruit {
+      height: 40px;
+    }
   }
 }

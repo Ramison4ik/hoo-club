@@ -7,7 +7,9 @@
     max-width: 1280px;
     margin: 0 auto;
   }
-
+  &__slider-wrapper {
+    display: none;
+  }
   &__main-image {
     border-radius: 14px;
     overflow: hidden;
@@ -17,7 +19,7 @@
   }
 
   &__image {
-    padding-right: 40px;
+    margin-right: 40px;
     border-radius: 14px;
     overflow: hidden;
   }
@@ -30,13 +32,83 @@
     padding-bottom: 32px;
   }
 
+  &__slider-wrapper {
+    position: relative;
+    padding-bottom: 30px;
+  }
+
   &__title {
     padding-bottom: 24px;
   }
 
   &__about-us-smoke {
     position: absolute;
-    left: -290px;
+    left: -256px;
     bottom: 50px;
   }
+}
+
+@media (max-width: 1266px) {
+  .AboutUs {
+    &__wrapper {
+      padding: 0 40px 174px 40px;
+    }
+    &__main-image {
+      height: 300px;
+      width: 558px;
+    }
+    &__about-us-smoke {
+      display: none;
+    }
+  }
+}
+@media (max-width: 1149px) {
+  .AboutUs {
+    &__image {
+      display: none;
+    }
+
+    &__text-wrapper {
+      max-width: unset;
+      width: 100%;
+    }
+
+    &__title {
+      padding-bottom: 40px;
+    }
+    &__slider-wrapper {
+      display: block;
+    }
+    &__carousel-item-img {
+      border-radius: 12px;
+      padding-right: 24px;
+      max-height: 270px;
+      max-width: 450px;
+    }
+  }
+}
+@media (max-width: 1018px) {
+  .AboutUs {
+    &__wrapper {
+      padding: 0 40px 174px 40px;
+    }
+  }
+}
+
+.AboutUs__carousel .slick-list .slick-track {
+  // чтобы не центрировалось по центру когда 1 слайд
+  margin: 0;
+  display: flex;
+}
+.slick-list {
+  overflow: hidden;
+  max-width: 1286px;
+}
+.slick-track {
+  display: flex;
+}
+
+.AboutUs__carousel .slick-prev,
+.AboutUs__carousel .slick-next {
+  display: none !important;
 }

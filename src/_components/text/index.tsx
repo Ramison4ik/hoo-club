@@ -23,6 +23,7 @@ export type FontSizeType =
   | 'h5'
   | 'h1-gagalin'
   | 'h2-gagalin'
+  | 'h3-gagalin'
   | 'h1-mobile'
   | 'h2-mobile'
   | 'h2-bold'
@@ -33,6 +34,7 @@ export type FontColorType =
   | 'Black'
   | 'White'
   | 'Yellow'
+  | 'Purple'
 
 export const Text = memo(
   ({

@@ -3,7 +3,6 @@ import {Text} from "src/_components/text";
 import Slider from 'react-slick';
 import {RightSliderButton} from "src/_components/right-slider-button";
 import stockLeftSmoke from "src/page/_components/hoo-content/_assets/stock-left-smoke.svg";
-import stockRightSmoke from "src/page/_components/hoo-content/_assets/stock-rigth-smoke.svg";
 import {SLIDER_IMG} from "./_constants";
 import {ANCHORS} from "src/page/_components/_constants";
 import './index.scss'
@@ -23,15 +22,6 @@ export const Stock = memo(() => {
           // @ts-ignore
           loading="lazy"
           src={stockLeftSmoke}
-        />
-        <img
-          alt='HooClub'
-          className='Stock__right-image'
-          // https://caniuse.com/?search=lazy%20loading%20attribute
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          loading="lazy"
-          src={stockRightSmoke}
         />
       </div>
       <div className="Stock__slider-wrapper">

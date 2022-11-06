@@ -2,7 +2,9 @@ import React, { memo } from "react";
 import youngMan from "src/page/_components/hoo-content/_assets/young-man.jpg";
 import aboutUsSmoke from "src/page/_components/hoo-content/_assets/about-us-smoke.svg";
 import {Text} from "src/_components/text";
+import Slider from 'react-slick';
 import {ANCHORS} from "src/page/_components/_constants";
+import {SLIDER_IMG} from "./_constants";
 import './index.scss'
 
 export const AboutUs = memo(() => {
@@ -31,6 +33,28 @@ export const AboutUs = memo(() => {
       <div className="AboutUs__text-wrapper">
         <div className="AboutUs__title">
           <Text size="h0" color='White' text='О нас'/>
+        </div>
+        <div className="AboutUs__slider-wrapper">
+          <Slider
+            accessibility
+            className='AboutUs__carousel'
+            infinite={true}
+            nextArrow={null}
+            prevArrow={null}
+            slidesToShow={SLIDER_IMG.length - 1}
+            swipeToSlide
+            variableWidth
+            slidesToScroll={1}
+          >
+            {SLIDER_IMG.map((item) => (
+              <div key={item.id} className="AboutUs__carousel-item">
+                <div className="AboutUs__carousel-img">
+                  <img className={'AboutUs__carousel-item-img ' + `AboutUs__carousel-item-img--${item.id}`} src={item.icon} />
+                </div>
+              </div>
+              )
+            )}
+          </Slider>
         </div>
         <div className="AboutUs__main-text">
           <Text size="h3-mobile" color='White' text='В команде HooClub работают только профессиональные кальянные мастера с огромным опытом работы. В нашем арсенале качественные кальяны мировых известных брендов, а также  табак самых разных видов и вкусов. Учитываем каждый нюанс и все предпочтения. В кальянном меню предоставлены лучшие миксы вкусов.'/>

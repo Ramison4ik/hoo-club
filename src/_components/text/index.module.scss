@@ -18,6 +18,9 @@
     &-h2-gagalin {
       @include h2-gagalin;
     }
+    &-h3-gagalin {
+      @include h3-gagalin;
+    }
     &-h2 {
       @include h2;
     }
@@ -56,6 +59,9 @@
   &.color {
     &-Black {
       @include Black;
+    }
+    &-Purple {
+      color: #D231C1;
     }
     &-BlackHeader {
       @include BlackHeader;

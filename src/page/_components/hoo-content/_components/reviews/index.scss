@@ -116,3 +116,11 @@
 .Reviews__carousel .slick-next::before {
   display: none;
 }
+
+@media (max-width: 1325px) {
+  .Reviews {
+    &__wrapper {
+      padding: 12px 12px 150px 12px;
+    }
+  }
+}

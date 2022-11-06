@@ -97,6 +97,7 @@
   overflow: hidden;
   max-width: 1286px;
 }
+
 .Stock__carousel  .slick-track {
   justify-content: space-around;
   width: 3840px !important;
@@ -139,4 +140,21 @@
 .Stock__carousel .slick-prev::before,
 .Stock__carousel .slick-next::before {
   display: none;
+}
+
+@media (max-width: 1325px) {
+  .Stock {
+    &__wrapper {
+      padding: 12px 12px 150px 12px;
+    }
+    &__left-image {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .Stock__carousel  .slick-track {
+    width: unset !important;
+  }
 }

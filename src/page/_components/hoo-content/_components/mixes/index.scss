@@ -5,10 +5,9 @@
     padding-bottom: 244px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: relative;
     justify-content: space-between;
-    max-width: 1234px;
-    margin: 0 auto;
   }
 
   &__main-text {
@@ -16,7 +15,8 @@
   }
 
   &__text-wrapper {
-    max-width: 946px;
+    max-width: 1234px;
+    margin: 0 auto;
   }
 
   &__slider-wrapper {
@@ -25,8 +25,8 @@
 
   &__mix-image {
     position: absolute;
-    right: -277px;
-    top: -201px;
+    right: 0;
+    top: -140px;
   }
 
   &__secondary-text {
@@ -84,7 +84,7 @@
 
 // тень для стрелки
 .Mixes__carousel .slick-next {
-  margin-right: 24px;
+  margin-right: 0;
   right: 0;
   transform-style: preserve-3d;
 
@@ -99,4 +99,34 @@
 .Mixes__carousel .slick-prev::before,
 .Mixes__carousel .slick-next::before {
   display: none;
+}
+@media (max-width: 1325px) {
+  .Mixes {
+    &__wrapper {
+      align-items: unset;
+      padding: 12px 12px 150px 12px;
+    }
+    &__carousel-item {
+      padding-right: 0;
+    }
+  }
+  .slick-slide {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 1224px) {
+  .Mixes {
+    &__mix-image {
+      display: none;
+    }
+    &__carousel-item {
+      padding-right: 0;
+    }
+  }
+}
+@media (max-width: 773px) {
+  .Mixes__carousel .slick-prev,
+  .Mixes__carousel .slick-next {
+    display: none !important;
+  }
 }

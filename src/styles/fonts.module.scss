@@ -32,6 +32,12 @@ $LatoFontBold: "latobold",arial,sans-serif;
   line-height: 56px;
 }
 
+@mixin h3-gagalin {
+  font-family: $GagalinFont;
+  font-size: 18px;
+  line-height: 36px;
+}
+
 @mixin h1-mobile {
   font-family: $LatoFontBold !important;
   font-size: 24px !important;

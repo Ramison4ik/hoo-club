@@ -17,7 +17,6 @@ import {Footer} from "src/page/_components/hoo-content/_components/footer";
 import {pageNavigate} from "src/page/_components/hoo-header/_utils/handleNavigate";
 import {Calculator} from "src/page/_components/hoo-content/_components/calculator";
 import './index.scss'
-import axios from "axios";
 
 export const HooContent = memo(() => {
   const [isModalOpened, setIsModalOpened] = useState(false);

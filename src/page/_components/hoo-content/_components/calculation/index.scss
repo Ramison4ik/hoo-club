@@ -24,6 +24,12 @@
     display: flex;
     align-items: center;
   }
+  &__hours-mobile {
+    display: none;
+  }
+  &__tabs-mobile {
+    display: none;
+  }
   &__message-link {
     text-decoration: none;
     display: flex;
@@ -51,6 +57,7 @@
     list-style: none;
     display: flex;
     padding: 0;
+    position: relative;
     justify-content: space-between;
   }
 
@@ -81,69 +88,23 @@
     align-items: center;
     flex-direction: column;
   }
-
-  &__3hour-round {
-    border: 1px solid #D231C1;
-    border-radius: 40px;
-    width: 24px;
-    height: 24px;
-    &::before {
-      border: 1px solid #5E1ED2;
-      content: "";
-      display: block;
-      height: 8px;
-      margin: 7px -95px;
-      width: 93px;
-    }
-    &::after {
-      border: 1px solid #5E1ED2;
-      content: "";
-      display: block;
-      height: 8px;
-      margin: -16px 24px;
-      width: 188px;
-    }
-    &--active {
-      background: linear-gradient(90.23deg, #D231C1 3.15%, #5E1ED2 99.8%);
-      border-radius: 40px;
-    }
+  &__hours-line {
+    position: absolute;
+    border: 1px solid #5E1ED2;
+    width: 100%;
+    height: 8px;
+    top: 8px;
+    z-index: 1;
   }
-
-  &__8hour-round {
-    border: 1px solid #D231C1;
-    border-radius: 40px;
-    width: 24px;
-    height: 24px;
-    &::after {
-      border: 1px solid #5E1ED2;
-      content: "";
-      display: block;
-      height: 8px;
-      margin: 7px 23px;
-      width: 92px;
-    }
-    &--active {
-      background: linear-gradient(90.23deg, #D231C1 3.15%, #5E1ED2 99.8%);
-      border-radius: 40px;
-    }
-  }
-
   &__hour-round {
     border: 1px solid #D231C1;
     border-radius: 40px;
     width: 24px;
     height: 24px;
-    &::after {
-      border: 1px solid #5E1ED2;
-      content: "";
-      display: block;
-      height: 8px;
-      margin: 7px 24px;
-      width: 188px;
-    }
     &--active {
       background: linear-gradient(90.23deg, #D231C1 3.15%, #5E1ED2 99.8%);
       border-radius: 40px;
+      z-index: 2;
     }
   }
 
@@ -178,5 +139,70 @@
   }
   &__callback-wrapper {
     display: flex;
+  }
+}
+
+@media (max-width: 1284px) {
+  .Calculation {
+    &__wrapper {
+      padding: 12px 12px 0 12px;
+    }
+    &__title {
+      text-align: start;
+    }
+
+    &__tabs{
+      display: none;
+    }
+    &__tabs-mobile {
+      display: flex;
+      list-style: none;
+      flex-direction: column;
+    }
+    &__tabs-line {
+      display: none;
+    }
+    &__tabs-mobile-wrapper {
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 32px;
+    }
+    &__tab-underline {
+      bottom: -12px;
+      width: 100%;
+    }
+    &__tab {
+      margin-right: 24px;
+    }
+    &__tabs-wrapper {
+      padding-bottom: 60px;
+    }
+    &__tab-underline-empty {
+      border:1px solid #D231C1;
+      border-radius: 40px;
+      height: 8px;
+      position: absolute;
+      width: 100%;
+      bottom: -12px;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .Calculation {
+    &__cost-callback-wrapper {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .Calculation {
+    &__cost-wrapper {
+      padding-bottom: 12px;
+    }
+    &__callback {
+      margin-right: 30px;
+    }
   }
 }

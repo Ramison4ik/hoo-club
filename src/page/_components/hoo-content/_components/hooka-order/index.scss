@@ -25,11 +25,6 @@
     bottom: -25px;
   }
 
-  &__combination-list {
-    margin: 0;
-    padding: 0;
-  }
-
   &__first-tab {
     margin-right: 48px;
     cursor: pointer;
@@ -41,75 +36,13 @@
     position: relative;
   }
 
-  &__tab-content {
-    display: flex;
-    padding-bottom: 90px;
-  }
-
-  &__combination-wrapper {
-    display: flex;
-  }
-
-  &__combination {
-    padding-right: 30px;
-  }
-
-  &__combination-list-item {
-    list-style: none;
-    white-space: nowrap;
-    padding-bottom: 24px;
-    min-width: 200px;
-    &::before {
-      content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-      color: #fff; /* Change the color */
-      font-weight: bold; /* If you want it to be bold */
-      display: inline-block; /* Needed to add space between the bullet and the text */
-      width: 1em; /* Also needed for space (tweak if needed) */
-      margin-left: -1em; /* Also needed for space (tweak if needed) */
-    }
-    &--present {
-      list-style: none;
-      &::before {
-        content: ""
-      }
-    }
-  }
-
-  &__list-item-present-wrapper {
-    position: relative;
-  }
-
-  &__list-item-present-image {
-    position: absolute;
-    left: -24px;
-  }
-
   &__second-tab {
     list-style: none;
     cursor: pointer;
   }
 
-  &__combination-hooka {
+  &__tabs-content-desktop {
     display: flex;
-    flex-direction: column;
-    background: linear-gradient(180deg, #2E313A 0%, rgba(46, 49, 58, 0) 100%);
-    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.1));
-    border-radius: 12px;
-    margin-right: 40px;
-    padding: 24px 24px 24px 40px;
-  }
-
-  &__combination-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__combination-button {
-    cursor: pointer;
-    background: linear-gradient(90.23deg, #D231C1 3.15%, #5E1ED2 99.8%);
-    border-radius: 100px;
-    padding: 8px 32px;
   }
 
   &__delivery-wrapper {
@@ -128,7 +61,9 @@
   &__delivery-terms-image {
     display: flex;
   }
-
+  &__delivery-terms-text-mobile {
+    display: none;
+  }
   &__terms-image {
     padding-right: 20px;
   }
@@ -151,7 +86,9 @@
     min-width: 30%;
     border-radius: 40px 0 0 40px;
   }
-
+  &__tabs-content-mobile {
+    display: none;
+  }
   &__delivery-block-second {
     background: #282A32;
     padding: 8px 16px;
@@ -166,4 +103,110 @@
     min-width: 30%;
     border-radius: 0 40px 40px 0;
   }
+}
+
+@media (max-width: 1068px) {
+  .HookaOrder {
+    &__tabs-content-desktop {
+      display: none;
+    }
+    &__tabs-content-mobile {
+      position: relative;
+      display: block;
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 1352px) {
+  .HookaOrder {
+    &__hooka-image {
+      position: absolute;
+      top: 90px;
+      right: -14px;
+    }
+    &__combination-hooka {
+      height: 356px;
+      width: 30%;
+      justify-content: space-between;
+    }
+
+    &__combination-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__combination-button-wrapper {
+      width: 100%;
+      max-width: 160px;
+      text-align: center;
+    }
+    &__combination-price {
+      padding-bottom: 24px;
+    }
+    &__wrapper {
+      padding: 0 40px 0 40px;
+    }
+    &__delivery-block-first,
+    &__delivery-block-second,
+    &__delivery-block-third{
+      min-width: 20%;
+    }
+  }
+}
+
+@media (max-width: 928px) {
+  .HookaOrder {
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+@media (max-width: 852px) {
+  .HookaOrder {
+    &__delivery-terms-wrapper {
+      flex-direction: column;
+    }
+    &__delivery-terms-image {
+      padding-bottom: 8px;
+    }
+    &__delivery-terms-second-text {
+      display: none;
+    }
+    &__delivery-terms-text-mobile {
+      display: flex;
+    }
+    &__delivery-bottom {
+      flex-direction: column;
+    }
+    &__delivery-block-first,
+    &__delivery-block-second,
+    &__delivery-block-third {
+      margin-bottom: 8px;
+    }
+    &__delivery-wrapper {
+      padding-bottom: 160px;
+    }
+  }
+}
+.HookaOrder__carousel .slick-list .slick-track {
+  // чтобы не центрировалось по центру когда 1 слайд
+  margin: 0;
+  display: flex;
+}
+.slick-list {
+  overflow: hidden;
+  max-width: 1286px;
+}
+.slick-slide {
+  margin-right: 90px !important;
+}
+.slick-track {
+  display: flex;
+}
+
+.HookaOrder__carousel .slick-prev,
+.HookaOrder__carousel .slick-next {
+  display: none !important;
 }

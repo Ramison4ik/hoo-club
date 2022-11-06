@@ -22,3 +22,11 @@
     cursor: pointer;
   }
 }
+
+@media (max-width: 720px) {
+  .Footer {
+    &__logo {
+      padding-right: 8px;
+    }
+  }
+}

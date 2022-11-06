@@ -44,11 +44,11 @@ export const ModalView = memo(
      size,
      title,
    }: Props) => {
-
+    const fullScreen = isFullScreen ? 'Modal--full' : 'Modal--m';
     return (
       <div
         ref={modalRef}
-        className={'Modal ' + 'Modal__center ' + 'Modal__size--m'}
+        className={'Modal ' + 'Modal__center ' + `${fullScreen}`}
         role="presentation"
       >
         {Boolean(title) && (
